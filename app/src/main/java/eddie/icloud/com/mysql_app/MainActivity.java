@@ -91,6 +91,10 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(MainActivity.this,RegisterUser.class);
             startActivity(i);
         }
+        else if(id ==R.id.action_login){
+            Intent i = new Intent(MainActivity.this,Login.class);
+            startActivity(i);
+        }
 
         return super.onOptionsItemSelected(item);
     }

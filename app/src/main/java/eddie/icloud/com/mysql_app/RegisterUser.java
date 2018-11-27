@@ -1,6 +1,7 @@
 package eddie.icloud.com.mysql_app;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -88,7 +89,8 @@ public class RegisterUser extends AppCompatActivity {
         loginText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: Start Login here
+                Intent i = new Intent(RegisterUser.this, Login.class);
+                startActivity(i);
             }
         });
 
