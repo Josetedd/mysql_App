@@ -87,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        else if(id ==R.id.action_add_user){
+            Intent i = new Intent(MainActivity.this,RegisterUser.class);
+            startActivity(i);
+        }
 
         return super.onOptionsItemSelected(item);
     }
