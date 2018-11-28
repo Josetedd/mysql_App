@@ -95,6 +95,11 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(MainActivity.this,Login.class);
             startActivity(i);
         }
+        else if(id ==R.id.action_view_product){
+            Intent i = new Intent(MainActivity.this,ViewProducts.class);
+            startActivity(i);
+        }
+
 
         return super.onOptionsItemSelected(item);
     }

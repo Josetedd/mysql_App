@@ -17,4 +17,9 @@
         android:orderInCategory="100"
         android:title="Login"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_view_product"
+        android:orderInCategory="100"
+        android:title="View products"
+        app:showAsAction="never" />
 </menu>
