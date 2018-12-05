@@ -20,6 +20,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import api.MPESACheckout;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, AddProductActivity.class);
+                Intent i = new Intent(MainActivity.this, MPESACheckout.class);
                 startActivity(i);
             }
         });
@@ -152,8 +154,19 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            // Return fragments
+            if(position ==0){
+                return new HomeFragment();
+            }
+            else if(position ==1){
+                return new ProductFragment();
+            }
+            else if(position ==2){
+                return new ServiceFragment();
+            }
+            else {
+                return null;
+            }
         }
 
         @Override
